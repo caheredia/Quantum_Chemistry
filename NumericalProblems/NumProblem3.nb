@@ -1,0 +1,1398 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     50347,       1389]
+NotebookOptionsPosition[     46055,       1233]
+NotebookOutlinePosition[     46410,       1249]
+CellTagsIndexPosition[     46367,       1246]
+WindowFrame->Normal
+ContainsDynamic->False*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Numerical Problem 3", "Title",
+ CellChangeTimes->{{3.443243657341661*^9, 3.44324366308554*^9}}],
+
+Cell["\<\
+CG is script that takes {j1,j2,J,M} as inputs and yields the ClebschGordan \
+Coefficients attached to corresponding states. \
+\>", "Text"],
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", 
+  RowBox[{"j1", ",", "j2", ",", "J", ",", "M"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CG", "[", 
+   RowBox[{"j1_", ",", "j2_", ",", "J_", ",", "M_"}], "]"}], ":=", 
+  "\[IndentingNewLine]", 
+  RowBox[{"Do", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Do", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"m1", "+", "m2"}], "==", "M"}], ",", 
+        RowBox[{"Print", "[", 
+         RowBox[{
+          RowBox[{"ClebschGordan", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"j1", ",", "m1"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"j2", ",", "m2"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"J", ",", "M"}], "}"}]}], "]"}], ",", 
+          "\"\<\[LeftBracketingBar]\>\"", ",", "j1", ",", "\"\<,\>\"", ",", 
+          "m1", ",", "\"\<\[RightAngleBracket]\>\"", ",", 
+          "\"\<\[LeftBracketingBar]\>\"", ",", "j2", ",", "\"\<,\>\"", ",", 
+          "m2", ",", "\"\<\[RightAngleBracket]\>\""}], "]"}], ",", "0"}], 
+       "]"}], "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
+      RowBox[{"{", 
+       RowBox[{"m2", ",", 
+        RowBox[{"-", "j2"}], ",", "j2"}], "}"}]}], "]"}], 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{"m1", ",", 
+      RowBox[{"-", "j1"}], ",", "j1"}], "}"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.443242768844838*^9, 3.443242789186502*^9}, {
+   3.443242825565722*^9, 3.443242831524404*^9}, {3.443242870393489*^9, 
+   3.4432428731537027`*^9}, 3.443242956539691*^9, {3.44324299254746*^9, 
+   3.4432430446623373`*^9}, {3.443243090610415*^9, 3.443243096222063*^9}, {
+   3.443243255943369*^9, 3.443243432598132*^9}, {3.443243703812307*^9, 
+   3.443243714052589*^9}, {3.443243759140256*^9, 3.443243831224104*^9}, {
+   3.4432438700262136`*^9, 3.443243872864831*^9}, {3.44324444453961*^9, 
+   3.443244467096986*^9}, {3.4432449928023777`*^9, 3.4432450185046873`*^9}, {
+   3.4432455479107933`*^9, 3.443245580466009*^9}, {3.443245689566063*^9, 
+   3.443245695525529*^9}, {3.443245810778975*^9, 3.4432458175459003`*^9}, {
+   3.4432458661925087`*^9, 3.4432458701199913`*^9}, {3.443377491278336*^9, 
+   3.4433776029825487`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+(1) Use your script to do problem 4.20. 
+\
+\>", "Subsubsection"],
+
+Cell[TextData[StyleBox["Problem 4.20 states j1 = 1 and j2 = 1/2. Starting \
+from the J = 3/2 state we will step down to J = 1/2", "Text"]], "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CG", "[", 
+  RowBox[{"1", ",", 
+   RowBox[{"1", "/", "2"}], ",", 
+   RowBox[{"3", "/", "2"}], ",", 
+   RowBox[{"3", "/", "2"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.443243719321869*^9, 3.443243724095181*^9}, {
+  3.443243876652042*^9, 3.443243888068952*^9}, {3.4432439569970713`*^9, 
+  3.4432439733003473`*^9}, {3.443244061638184*^9, 3.4432441334626207`*^9}, {
+  3.443244521787423*^9, 3.443244554168598*^9}, {3.4432446109542217`*^9, 
+  3.443244625844681*^9}, {3.443244665799655*^9, 3.443244669316375*^9}, {
+  3.443244710631091*^9, 3.4432447121913633`*^9}, {3.443245000710498*^9, 
+  3.443245032885253*^9}, {3.443245110218425*^9, 3.443245134572822*^9}, {
+  3.443245199501177*^9, 3.443245232483832*^9}, {3.443245266020103*^9, 
+  3.443245272080783*^9}, {3.443245647558763*^9, 3.44324565210716*^9}, {
+  3.443245713031358*^9, 3.443245714745088*^9}, {3.4432457968319607`*^9, 
+  3.4432458331091967`*^9}, {3.443245907386944*^9, 3.4432459074879017`*^9}, {
+  3.443246995764267*^9, 3.443247000035087*^9}, {3.443247042652574*^9, 
+  3.4432470479371347`*^9}, {3.443247213049999*^9, 3.443247213613467*^9}, {
+  3.443247266845743*^9, 3.44324729626702*^9}, {3.443247376903592*^9, 
+  3.443247378431953*^9}, {3.443247529583398*^9, 3.4432475868217154`*^9}, {
+  3.4432480048718443`*^9, 3.443248023473255*^9}, {3.4432482968785477`*^9, 
+  3.4432483389606953`*^9}, {3.443248391525014*^9, 3.4432484063664093`*^9}, {
+  3.4432886756360064`*^9, 3.4432886812899323`*^9}, {3.4433642597531137`*^9, 
+  3.4433642624386063`*^9}, {3.4433644806762733`*^9, 3.443364481388508*^9}, {
+  3.443377626186973*^9, 3.4433776375612373`*^9}, {3.443377747882102*^9, 
+  3.443377776354506*^9}, {3.443377819261376*^9, 3.443377823356763*^9}, {
+  3.4433780430905857`*^9, 3.4433780458573647`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "1", "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   FractionBox["1", "2"], "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   FractionBox["1", "2"], 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  1, "\[LeftBracketingBar]", 1, ",", 1, "\[RightAngleBracket]", 
+   "\[LeftBracketingBar]", 
+   Rational[1, 2], ",", 
+   Rational[1, 2], "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.443288683132691*^9, 3.443364263122897*^9, 3.443364482133937*^9, {
+   3.443377590661684*^9, 3.443377637910818*^9}, 3.443377823980542*^9, 
+   3.443378046014517*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CG", "[", 
+  RowBox[{"1", ",", 
+   RowBox[{"1", "/", "2"}], ",", 
+   RowBox[{"3", "/", "2"}], ",", 
+   RowBox[{"1", "/", "2"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.4433778755171013`*^9, 3.443377876750353*^9}, 
+   3.443378066427902*^9, {3.4433780966987867`*^9, 3.443378096800282*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   SqrtBox[
+    FractionBox["2", "3"]], 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "1", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   FractionBox["1", "2"], "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   FractionBox["1", "2"], 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  Rational[2, 3]^Rational[1, 2], "\[LeftBracketingBar]", 1, ",", 0, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 
+   Rational[1, 2], ",", 
+   Rational[1, 2], "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378098553302*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["3"]], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   FractionBox["1", "2"], "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox["1", "2"]}], 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  3^Rational[-1, 2], "\[LeftBracketingBar]", 1, ",", 1, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 
+   Rational[1, 2], ",", 
+   Rational[-1, 2], "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378098581567*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CG", "[", 
+  RowBox[{"1", ",", 
+   RowBox[{"1", "/", "2"}], ",", 
+   RowBox[{"3", "/", "2"}], ",", 
+   RowBox[{
+    RowBox[{"-", "1"}], "/", "2"}]}], "]"}]], "Input",
+ CellChangeTimes->{3.443378324515753*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["3"]], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   FractionBox["1", "2"], "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   FractionBox["1", "2"], 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  3^Rational[-1, 2], "\[LeftBracketingBar]", 1, ",", -1, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 
+   Rational[1, 2], ",", 
+   Rational[1, 2], "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378325387692*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   SqrtBox[
+    FractionBox["2", "3"]], 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "1", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   FractionBox["1", "2"], "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox["1", "2"]}], 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  Rational[2, 3]^Rational[1, 2], "\[LeftBracketingBar]", 1, ",", 0, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 
+   Rational[1, 2], ",", 
+   Rational[-1, 2], "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378325416363*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CG", "[", 
+  RowBox[{"1", ",", 
+   RowBox[{"1", "/", "2"}], ",", 
+   RowBox[{"3", "/", "2"}], ",", 
+   RowBox[{
+    RowBox[{"-", "3"}], "/", "2"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.4433783942767897`*^9, 3.4433783943800783`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "1", "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   FractionBox["1", "2"], "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox["1", "2"]}], 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  1, "\[LeftBracketingBar]", 1, ",", -1, "\[RightAngleBracket]", 
+   "\[LeftBracketingBar]", 
+   Rational[1, 2], ",", 
+   Rational[-1, 2], "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378395226975*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CG", "[", 
+  RowBox[{"1", ",", 
+   RowBox[{"1", "/", "2"}], ",", 
+   RowBox[{"1", "/", "2"}], ",", 
+   RowBox[{"1", "/", "2"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.443378408124731*^9, 3.443378410033944*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox["1", 
+     SqrtBox["3"]]}], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   FractionBox["1", "2"], "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   FractionBox["1", "2"], 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[-3^Rational[-1, 2], "\[LeftBracketingBar]", 1, ",", 0, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 
+   Rational[1, 2], ",", 
+   Rational[1, 2], "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.4433784109841223`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   SqrtBox[
+    FractionBox["2", "3"]], 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "1", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   FractionBox["1", "2"], "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox["1", "2"]}], 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  Rational[2, 3]^Rational[1, 2], "\[LeftBracketingBar]", 1, ",", 1, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 
+   Rational[1, 2], ",", 
+   Rational[-1, 2], "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378411014256*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CG", "[", 
+  RowBox[{"1", ",", 
+   RowBox[{"1", "/", "2"}], ",", 
+   RowBox[{"1", "/", "2"}], ",", 
+   RowBox[{
+    RowBox[{"-", "1"}], "/", "2"}]}], "]"}]], "Input",
+ CellChangeTimes->{3.44337858857123*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"-", 
+    SqrtBox[
+     FractionBox["2", "3"]]}], 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "1", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   FractionBox["1", "2"], "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   FractionBox["1", "2"], 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[-Rational[2, 3]^Rational[1, 2], "\[LeftBracketingBar]", 1, 
+   ",", -1, "\[RightAngleBracket]", "\[LeftBracketingBar]", 
+   Rational[1, 2], ",", 
+   Rational[1, 2], "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.44337858904918*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["3"]], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   FractionBox["1", "2"], "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", 
+    FractionBox["1", "2"]}], 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  3^Rational[-1, 2], "\[LeftBracketingBar]", 1, ",", 0, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 
+   Rational[1, 2], ",", 
+   Rational[-1, 2], "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.4433785890501623`*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+(2) Use your script to find all 9 angular momentum eigenstates with L=4, and \
+M = -4 ... 
++4 that arise from ccoupling two d electrons (l = 2) 
+\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.443378717900354*^9, 3.4433787192284393`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CG", "[", 
+  RowBox[{"2", ",", "2", ",", "4", ",", 
+   RowBox[{"-", "4"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.4433787271641912`*^9, 3.443378734753561*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "1", "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "2"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "2"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  1, "\[LeftBracketingBar]", 2, ",", -2, "\[RightAngleBracket]", 
+   "\[LeftBracketingBar]", 2, ",", -2, "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378735088503*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CG", "[", 
+  RowBox[{"2", ",", "2", ",", "4", ",", 
+   RowBox[{"-", "3"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.443378764656577*^9, 3.443378766012845*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["2"]], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "2"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  2^Rational[-1, 2], "\[LeftBracketingBar]", 2, ",", -2, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", -1, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.44337876622163*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["2"]], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "2"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  2^Rational[-1, 2], "\[LeftBracketingBar]", 2, ",", -1, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", -2, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378766230277*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CG", "[", 
+  RowBox[{"2", ",", "2", ",", "4", ",", 
+   RowBox[{"-", "2"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.4433787724466543`*^9, 3.443378772604569*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   SqrtBox[
+    FractionBox["3", "14"]], 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "2"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  Rational[3, 14]^Rational[1, 2], "\[LeftBracketingBar]", 2, ",", -2, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", 0, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.44337877294588*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["2", 
+    SqrtBox["7"]], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  2 7^Rational[-1, 2], "\[LeftBracketingBar]", 2, ",", -1, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", -1, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.4433787729584846`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   SqrtBox[
+    FractionBox["3", "14"]], 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "2"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  Rational[3, 14]^Rational[1, 2], "\[LeftBracketingBar]", 2, ",", 0, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", -2, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.4433787729611464`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CG", "[", 
+  RowBox[{"2", ",", "2", ",", "4", ",", 
+   RowBox[{"-", "1"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.443378778190127*^9, 3.44337877834838*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["14"]], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "2"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  14^Rational[-1, 2], "\[LeftBracketingBar]", 2, ",", -2, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", 1, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378778758554*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   SqrtBox[
+    FractionBox["3", "7"]], 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  Rational[3, 7]^Rational[1, 2], "\[LeftBracketingBar]", 2, ",", -1, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", 0, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378778765881*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   SqrtBox[
+    FractionBox["3", "7"]], 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  Rational[3, 7]^Rational[1, 2], "\[LeftBracketingBar]", 2, ",", 0, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", -1, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378778767861*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["14"]], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "2"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  14^Rational[-1, 2], "\[LeftBracketingBar]", 2, ",", 1, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", -2, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378778804854*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CG", "[", 
+  RowBox[{"2", ",", "2", ",", "4", ",", "0"}], "]"}]], "Input",
+ CellChangeTimes->{{3.4433787863592367`*^9, 3.443378789419812*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["70"]], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "2"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  70^Rational[-1, 2], "\[LeftBracketingBar]", 2, ",", -2, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", 2, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.4433787898830013`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"2", " ", 
+    SqrtBox[
+     FractionBox["2", "35"]]}], 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  2 Rational[2, 35]^Rational[1, 2], "\[LeftBracketingBar]", 2, ",", -1, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", 1, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378789891634*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"3", " ", 
+    SqrtBox[
+     FractionBox["2", "35"]]}], 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  3 Rational[2, 35]^Rational[1, 2], "\[LeftBracketingBar]", 2, ",", 0, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", 0, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378789928213*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"2", " ", 
+    SqrtBox[
+     FractionBox["2", "35"]]}], 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  2 Rational[2, 35]^Rational[1, 2], "\[LeftBracketingBar]", 2, ",", 1, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", -1, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378789961657*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["70"]], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "2"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  70^Rational[-1, 2], "\[LeftBracketingBar]", 2, ",", 2, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", -2, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378789996501*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CG", "[", 
+  RowBox[{"2", ",", "2", ",", "4", ",", "1"}], "]"}]], "Input",
+ CellChangeTimes->{{3.443378795757234*^9, 3.4433787960598927`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["14"]], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  14^Rational[-1, 2], "\[LeftBracketingBar]", 2, ",", -1, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", 2, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378796489809*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   SqrtBox[
+    FractionBox["3", "7"]], 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  Rational[3, 7]^Rational[1, 2], "\[LeftBracketingBar]", 2, ",", 0, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", 1, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378796503161*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   SqrtBox[
+    FractionBox["3", "7"]], 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  Rational[3, 7]^Rational[1, 2], "\[LeftBracketingBar]", 2, ",", 1, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", 0, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378796536417*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["14"]], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  14^Rational[-1, 2], "\[LeftBracketingBar]", 2, ",", 2, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", -1, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.4433787965693483`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CG", "[", 
+  RowBox[{"2", ",", "2", ",", "4", ",", "2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.4433788002908*^9, 3.4433788005956078`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   SqrtBox[
+    FractionBox["3", "14"]], 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  Rational[3, 14]^Rational[1, 2], "\[LeftBracketingBar]", 2, ",", 0, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", 2, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.4433788012106323`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["2", 
+    SqrtBox["7"]], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  2 7^Rational[-1, 2], "\[LeftBracketingBar]", 2, ",", 1, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", 1, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378801234971*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   SqrtBox[
+    FractionBox["3", "14"]], 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  Rational[3, 14]^Rational[1, 2], "\[LeftBracketingBar]", 2, ",", 2, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", 0, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378801269266*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CG", "[", 
+  RowBox[{"2", ",", "2", ",", "4", ",", "3"}], "]"}]], "Input",
+ CellChangeTimes->{{3.443378804374907*^9, 3.443378806219364*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["2"]], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  2^Rational[-1, 2], "\[LeftBracketingBar]", 2, ",", 1, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", 2, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378806487535*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["2"]], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  2^Rational[-1, 2], "\[LeftBracketingBar]", 2, ",", 2, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", 1, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378806516468*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CG", "[", 
+  RowBox[{"2", ",", "2", ",", "4", ",", "4"}], "]"}]], "Input",
+ CellChangeTimes->{3.443378809309826*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "1", "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  1, "\[LeftBracketingBar]", 2, ",", 2, "\[RightAngleBracket]", 
+   "\[LeftBracketingBar]", 2, ",", 2, "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378809825385*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Use your script to find  the eigenstate with L = 0 that arises from coupling \
+two d 
+electrons (l = 2).  Show that the state with L=4, M=0 is orthogonal to the \
+state with L=0. 
+\
+\>", "Subsubsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CG", "[", 
+  RowBox[{"2", ",", "2", ",", "0", ",", "0"}], "]"}]], "Input",
+ CellChangeTimes->{{3.4433789123380136`*^9, 3.443378932235421*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["5"]], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "2"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  5^Rational[-1, 2], "\[LeftBracketingBar]", 2, ",", -2, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", 2, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378932879756*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox["1", 
+     SqrtBox["5"]]}], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[-5^Rational[-1, 2], "\[LeftBracketingBar]", 2, ",", -1, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", 1, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378932893116*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["5"]], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  5^Rational[-1, 2], "\[LeftBracketingBar]", 2, ",", 0, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", 0, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378932895859*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox["1", 
+     SqrtBox["5"]]}], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[-5^Rational[-1, 2], "\[LeftBracketingBar]", 2, ",", 1, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", -1, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378932924869*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["5"]], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "2"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  5^Rational[-1, 2], "\[LeftBracketingBar]", 2, ",", 2, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", -2, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378932960092*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CG", "[", 
+  RowBox[{"2", ",", "2", ",", "4", ",", "0"}], "]"}]], "Input",
+ CellChangeTimes->{{3.4433789454474792`*^9, 3.443378946066876*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["70"]], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "2"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  70^Rational[-1, 2], "\[LeftBracketingBar]", 2, ",", -2, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", 2, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378946728807*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"2", " ", 
+    SqrtBox[
+     FractionBox["2", "35"]]}], 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  2 Rational[2, 35]^Rational[1, 2], "\[LeftBracketingBar]", 2, ",", -1, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", 1, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378946758256*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"3", " ", 
+    SqrtBox[
+     FractionBox["2", "35"]]}], 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  3 Rational[2, 35]^Rational[1, 2], "\[LeftBracketingBar]", 2, ",", 0, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", 0, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378946790247*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"2", " ", 
+    SqrtBox[
+     FractionBox["2", "35"]]}], 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  2 Rational[2, 35]^Rational[1, 2], "\[LeftBracketingBar]", 2, ",", 1, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", -1, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.443378946826977*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["70"]], "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>", 
+   "\[InvisibleSpace]", "\<\"\[LeftBracketingBar]\"\>", "\[InvisibleSpace]", 
+   "2", "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "2"}], "\[InvisibleSpace]", "\<\"\[RightAngleBracket]\"\>"}],
+  SequenceForm[
+  70^Rational[-1, 2], "\[LeftBracketingBar]", 2, ",", 2, 
+   "\[RightAngleBracket]", "\[LeftBracketingBar]", 2, ",", -2, 
+   "\[RightAngleBracket]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.4433789468594646`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+To prove the states L=0, M=0 and L=4, M=0 are orthogonal we will take their \
+dot product. 
+
+<2,2,0,0 | 2,2,4,0> =\
+\>", "Text",
+ CellChangeTimes->{{3.443378986227755*^9, 3.4433789931444674`*^9}, {
+  3.4433790319523153`*^9, 3.443379174405395*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["5"]], "\[InvisibleSpace]", 
+   FractionBox["1", 
+    SqrtBox["70"]]}], "\[InvisibleSpace]", "-", 
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["5"]], "\[InvisibleSpace]", "2", " ", 
+   SqrtBox[
+    FractionBox["2", "35"]]}], "+", 
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["5"]], "\[InvisibleSpace]", "3", " ", 
+   SqrtBox[
+    FractionBox["2", "35"]]}], "\[InvisibleSpace]", "-", 
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["5"]], "\[InvisibleSpace]", "2", " ", 
+   SqrtBox[
+    FractionBox["2", "35"]]}], "+", 
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox["5"]], "\[InvisibleSpace]", 
+   FractionBox["1", 
+    SqrtBox["70"]], "\[InvisibleSpace]"}]}]], "Input",
+ CellChangeTimes->{{3.4433792856368103`*^9, 3.4433793265086393`*^9}}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.4433793273543673`*^9}]
+}, Open  ]],
+
+Cell["Thus, the two states are orthonormal. ", "Text",
+ CellChangeTimes->{{3.443379341039175*^9, 3.443379358487445*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1018, 752},
+WindowMargins->{{24, Automatic}, {Automatic, 0}},
+Magnification->1.5,
+FrontEndVersion->"6.0 for Mac OS X x86 (32-bit) (May 21, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[590, 23, 101, 1, 114, "Title"],
+Cell[694, 26, 148, 3, 39, "Text"],
+Cell[845, 31, 2347, 49, 295, "Input"],
+Cell[CellGroupData[{
+Cell[3217, 84, 74, 3, 58, "Subsubsection"],
+Cell[3294, 89, 147, 1, 39, "Text"],
+Cell[CellGroupData[{
+Cell[3466, 94, 1767, 27, 40, "Input"],
+Cell[5236, 123, 900, 21, 52, "Print"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6173, 149, 312, 7, 40, "Input"],
+Cell[CellGroupData[{
+Cell[6510, 160, 816, 19, 68, "Print"],
+Cell[7329, 181, 825, 20, 58, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8203, 207, 232, 7, 40, "Input"],
+Cell[CellGroupData[{
+Cell[8460, 218, 820, 19, 58, "Print"],
+Cell[9283, 239, 837, 20, 68, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10169, 265, 260, 7, 40, "Input"],
+Cell[10432, 274, 792, 19, 52, "Print"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11261, 298, 236, 6, 40, "Input"],
+Cell[CellGroupData[{
+Cell[11522, 308, 825, 19, 58, "Print"],
+Cell[12350, 329, 837, 20, 68, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13236, 355, 231, 7, 40, "Input"],
+Cell[CellGroupData[{
+Cell[13492, 366, 850, 19, 68, "Print"],
+Cell[14345, 387, 827, 20, 58, "Print"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15233, 414, 246, 6, 79, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[15504, 424, 185, 4, 40, "Input"],
+Cell[15692, 430, 709, 14, 30, "Print"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16438, 449, 183, 4, 40, "Input"],
+Cell[CellGroupData[{
+Cell[16646, 457, 761, 16, 58, "Print"],
+Cell[17410, 475, 762, 16, 58, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18221, 497, 185, 4, 40, "Input"],
+Cell[CellGroupData[{
+Cell[18431, 505, 759, 16, 67, "Print"],
+Cell[19193, 523, 766, 16, 58, "Print"],
+Cell[19962, 541, 762, 16, 67, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20773, 563, 182, 4, 40, "Input"],
+Cell[CellGroupData[{
+Cell[20980, 571, 748, 16, 58, "Print"],
+Cell[21731, 589, 758, 16, 68, "Print"],
+Cell[22492, 607, 758, 16, 68, "Print"],
+Cell[23253, 625, 748, 16, 58, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24050, 647, 166, 3, 40, "Input"],
+Cell[CellGroupData[{
+Cell[24241, 654, 750, 16, 58, "Print"],
+Cell[24994, 672, 788, 17, 68, "Print"],
+Cell[25785, 691, 772, 17, 68, "Print"],
+Cell[26560, 710, 788, 17, 68, "Print"],
+Cell[27351, 729, 748, 16, 58, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28148, 751, 166, 3, 40, "Input"],
+Cell[CellGroupData[{
+Cell[28339, 758, 748, 16, 58, "Print"],
+Cell[29090, 776, 742, 16, 68, "Print"],
+Cell[29835, 794, 742, 16, 68, "Print"],
+Cell[30580, 812, 750, 16, 58, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31379, 834, 164, 3, 40, "Input"],
+Cell[CellGroupData[{
+Cell[31568, 841, 746, 16, 67, "Print"],
+Cell[32317, 859, 732, 16, 58, "Print"],
+Cell[33052, 877, 744, 16, 67, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33845, 899, 164, 3, 40, "Input"],
+Cell[CellGroupData[{
+Cell[34034, 906, 730, 16, 58, "Print"],
+Cell[34767, 924, 730, 16, 58, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35546, 946, 140, 3, 40, "Input"],
+Cell[35689, 951, 677, 14, 30, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36415, 971, 213, 6, 79, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[36653, 981, 166, 3, 40, "Input"],
+Cell[CellGroupData[{
+Cell[36844, 988, 746, 16, 58, "Print"],
+Cell[37593, 1006, 765, 16, 58, "Print"],
+Cell[38361, 1024, 730, 16, 58, "Print"],
+Cell[39094, 1042, 765, 16, 58, "Print"],
+Cell[39862, 1060, 746, 16, 58, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40657, 1082, 166, 3, 40, "Input"],
+Cell[CellGroupData[{
+Cell[40848, 1089, 748, 16, 58, "Print"],
+Cell[41599, 1107, 788, 17, 68, "Print"],
+Cell[42390, 1126, 772, 17, 68, "Print"],
+Cell[43165, 1145, 788, 17, 68, "Print"],
+Cell[43956, 1164, 750, 16, 58, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[44733, 1184, 257, 7, 84, "Text"],
+Cell[CellGroupData[{
+Cell[45015, 1195, 802, 27, 83, "Input"],
+Cell[45820, 1224, 72, 1, 40, "Output"]
+}, Open  ]],
+Cell[45907, 1228, 120, 1, 39, "Text"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
